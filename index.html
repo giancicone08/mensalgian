@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API gian</title>
+    <link rel="stylesheet" href="assets/style.css">
+<header>Nesse site você pega piadas do Chuck Norris e tambem alguns fatos sobre ele
+</header>
+</head>
+<body>
+    <link rel="stylesheet" href="assets/images.jpg">
+    <h1>Carlos Ray "Chuck" Norris é um artista marcial e ator americano. Ele é faixa preta em Tang Soo Do, jiu jitsu brasileiro e judô. Depois de servir na Força Aérea dos Estados Unidos, Norris ganhou muitos campeonatos de artes marciais e mais tarde fundou sua própria disciplina, Chun Kuk Do.O ator e artista marcial Chuck Norris começou nas artes marciais enquanto servia no exército. Em 1958, Norris alistou-se na Força Aérea e recebeu a especialidade ocupacional militar de polícia aérea, hoje chamada de forças de segurança da Força Aérea. Seu objetivo era seguir carreira na aplicação da lei</h1>
+    <button onclick="getChuckNorrisJoke()">Mandar piada</button>
+    <p id="joke"></p>
+    <img src="assets/images.jpg" alt="img">
+
+    <script>
+        function getChuckNorrisJoke() {
+            const apiUrl = 'https://api.chucknorris.io/jokes/random';
+
+            fetch(apiUrl)
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                    throw new Error('Network response was not ok.');
+                })
+                .then(data => {
+                    document.getElementById('joke').textContent = data.value;
+                })
+                .catch(error => {
+                    console.error('There was a problem fetching Chuck Norris joke:', error);
+                });
+        }
+    </script>
+</body>
+</html>

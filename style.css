@@ -1,0 +1,65 @@
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Adiciona uma direção de coluna para alinhar os itens verticalmente */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilos compartilhados para texto */
+h1, p {
+    color: #333;
+    font-size: 18px;
+}
+
+header{
+    margin-top: 60px; /* Alinha o h1 para o topo */
+    height: 40px;
+    font-size: 30px;
+}
+
+h1 {
+    margin-bottom: 60px;
+
+}
+
+/* Estilos para o botão */
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px; /* Reduz a margem inferior do botão */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Espaçamento entre o botão e o parágrafo */
+button + p {
+    margin-top: 10px; /* Ajusta a margem superior do parágrafo */
+    margin-bottom: auto; /* Alinha as piadas um pouco mais para cima */
+}
+img{
+    bottom: 3px;
+    width: 500px;
+    height: 500px;
+}
